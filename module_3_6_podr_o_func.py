@@ -3,9 +3,9 @@ l = 0
 def calculate_structure_sum(args):
     global l
     for arg in args:
-        print(arg)
-        print('тип arg:', type(arg))
-        print(args)
+        # print(arg)
+        # print('тип arg:', type(arg))
+        # print(args)
         if isinstance(arg, str):
             l += len(arg)
         elif isinstance(arg, int):
