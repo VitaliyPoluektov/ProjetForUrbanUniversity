@@ -1,6 +1,6 @@
 def send_email(message, recipient, *, sender='university.help@gmail.com'):
-    if recipient.find('@') == -1 or sender.find('@') == -1 or (recipient[len(recipient)-4:] != '.com'\
-            and recipient[len(recipient)-4:] != '.net' and recipient[len(recipient)-3:] != '.ru')\
+    domen = ('.com', '.ru', '.net')
+    if recipient.find('@') == -1 or sender.find('@') == -1 or (recipient.endswith(domen) != True)\
             or (sender[len(sender)-4:] != '.net' and sender[len(sender)-3:] != '.ru' and sender[len(sender)-4:] != '.com'):
         print(f'Невозможно отправить письмо с адреса {sender} на адрес {recipient}')
         return
